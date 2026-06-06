@@ -153,13 +153,6 @@ All optional — see `.env.example`.
 
 ---
 
-## Note on the source
-
-This is a self-contained extraction of a Codex-subscription proxy from a larger
-private codebase. The Python client was lightly cleaned for release (debug-only
-instrumentation tied to the original repo was removed); all functional behavior is
-preserved.
-
 ## License
 
 MIT.
