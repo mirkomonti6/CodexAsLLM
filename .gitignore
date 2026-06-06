@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# Node (the bridge installs deps locally)
+codex_oauth_bridge/node_modules/
+codex_oauth_bridge/package-lock.json
+
+# OS
+.DS_Store
+
+# Local env
+.env

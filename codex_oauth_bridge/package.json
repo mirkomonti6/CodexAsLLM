@@ -1,0 +1,16 @@
+{
+  "name": "codex-oauth-bridge",
+  "version": "1.0.0",
+  "description": "Local HTTP bridge for Codex subscription OAuth authentication",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@mariozechner/pi-ai": "latest"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

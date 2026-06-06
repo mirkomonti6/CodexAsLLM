@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codex-llm-proxy"
+version = "1.0.0"
+description = "Use a ChatGPT/Codex subscription as a local OpenAI-compatible LLM proxy."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = ["openai>=1.93"]
+
+[project.scripts]
+codex-auth = "codex_auth:main"
+
+[tool.setuptools]
+packages = ["codex_llm_proxy"]
+py-modules = ["codex_auth"]

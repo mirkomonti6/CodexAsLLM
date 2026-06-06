@@ -1,0 +1,3 @@
+# Python dependencies for the Codex LLM proxy.
+# The Node.js OAuth bridge installs its own deps via npm (see codex_oauth_bridge/).
+openai>=1.93
