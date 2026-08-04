@@ -16,7 +16,7 @@ Quick start:
     bridge = get_shared_subscription_client()      # starts the Node bridge
     client = ChatGPTCodexOpenAI(get_token_fn=bridge.get_api_key)
     resp = client.responses.create(
-        model="gpt-5.4",
+        model="gpt-5.6-luna",
         instructions="You are a helpful assistant.",
         input=[{"role": "user", "content": "Hello!"}],
     )
@@ -39,7 +39,10 @@ from codex_llm_proxy.subscription_client import (
     get_shared_subscription_client,
 )
 
+DEFAULT_MODEL = "gpt-5.6-luna"
+
 __all__ = [
+    "DEFAULT_MODEL",
     "ChatGPTCodexOpenAI",
     "CodexSubscriptionClient",
     "CodexSubscriptionError",

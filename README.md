@@ -83,7 +83,7 @@ bridge = get_shared_subscription_client()          # starts the Node bridge
 client = ChatGPTCodexOpenAI(get_token_fn=bridge.get_api_key)
 
 resp = client.responses.create(
-    model="gpt-5.4",
+    model="gpt-5.6-luna",
     instructions="You are a helpful assistant.",
     input=[{"role": "user", "content": "Hello!"}],
 )
@@ -114,7 +114,7 @@ All optional — see `.env.example`.
 
 | Variable | Default | Meaning |
 |----------|---------|---------|
-| `CODEX_MODEL` | `gpt-5.4` | Model used by `example.py`. |
+| `CODEX_MODEL` | `gpt-5.6-luna` | Model used by `example.py`. |
 | `CODEX_OAUTH_BRIDGE_PORT` | `7777` | Local port for the Node bridge. |
 | `CODEX_OAUTH_DEBUG` | `0` | `1`/`true` to echo bridge stderr to your terminal. |
 | `CODEX_HISTORY_MAX` | `1000` | Max turns kept for `previous_response_id` chains. |
@@ -122,6 +122,13 @@ All optional — see `.env.example`.
 
 > The OAuth **callback** always uses port **1455** (hard-coded by the OAuth
 > library). It only needs to be free during the login flow.
+
+### gpt-5.6-luna
+
+The default model is `gpt-5.6-luna`. The model remains configurable through
+`CODEX_MODEL`, so existing models and gpt-5.6-luna family variants can still be
+selected explicitly, for example `gpt-5.6-luna-sol`, `gpt-5.6-luna-terra`, or
+`gpt-5.6-luna-luna` when the subscription backend exposes them.
 
 ---
 

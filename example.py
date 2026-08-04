@@ -19,8 +19,8 @@ Run it
 ------
     python example.py
 
-Choose the model with the CODEX_MODEL env var (default: gpt-5.4):
-    CODEX_MODEL=gpt-5.4 python example.py
+Choose the model with the CODEX_MODEL env var (default: gpt-5.6-luna):
+    CODEX_MODEL=gpt-5.6-luna python example.py
 """
 
 from __future__ import annotations
@@ -34,11 +34,12 @@ from codex_llm_proxy import (
     ChatGPTCodexOpenAI,
     CodexSubscriptionError,
     CodexSubscriptionNotAuthenticatedError,
+    DEFAULT_MODEL,
     extract_output_text,
     get_shared_subscription_client,
 )
 
-MODEL = os.getenv("CODEX_MODEL", "gpt-5.4")
+MODEL = os.getenv("CODEX_MODEL", DEFAULT_MODEL)
 
 
 def build_client() -> ChatGPTCodexOpenAI:

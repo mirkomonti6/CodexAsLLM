@@ -18,7 +18,7 @@ Usage:
     bridge = get_shared_subscription_client()          # starts the Node bridge
     client = ChatGPTCodexOpenAI(get_token_fn=bridge.get_api_key)
     resp = client.responses.create(
-        model="gpt-5.4",
+        model="gpt-5.6-luna",
         instructions="You are a helpful assistant.",
         input=[{"role": "user", "content": "Hello!"}],
     )
